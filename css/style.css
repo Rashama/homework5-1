@@ -55,17 +55,27 @@ footer{
 
 @-webkit-keyframes logo_wiggle{
   /*Your code here.*/
-
+  from {
+    width: 25px;
+  }
+  to {
+    width: 420px;
+  }
 }
 
 @keyframes logo_wiggle{
   /*Your code here.*/
-
+  from {
+    width: 25px;
+  }
+  to {
+    width: 420px;
+  }
 }
 
 #logo{
    /*Your code here.*/
-
+  animation: logo_wiggle 3s;
 }
 
 /* Cards! */
@@ -73,7 +83,15 @@ footer{
     min-height: 500px;
     /*Your code here.*/
     /*Don't forget to vertically and horizontally alight the card*/
-
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -83,7 +101,7 @@ footer{
   padding: 0 0 50px 0;
   /*Your code here.*/
   /*Take a look at flex-basis*/
-
+flex-basis: 400px;
 }
 
 .card > header{
@@ -129,6 +147,11 @@ footer{
 .gallery{
   min-height: 600px;
   /*Your code here again.*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .gallery > img{
@@ -142,10 +165,16 @@ header{
   background: #fff;
   border-bottom: 3px solid #50C7C7;
   /*Your  code here again.*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .nav_links{
   /*Your code here again.*/
+  align-self: center;
+  list-style: none;
 }
 
 .nav_item a{
@@ -165,6 +194,12 @@ header{
   /* Cards! */
   .card {
     /*Your  code here again.*/
+    flex-basis: 225px;
+    /* following are added bc not resized correctly */
+    margin: 12px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 0 0 50px 0;
   }
 
   .card_big{
@@ -175,10 +210,15 @@ header{
   /* Navbar */
   header{
     /*Your code here again.*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .nav_links{
     /*Your code here again.*/
+    display: flex;
+    align-items: flex-end;
   }
 
   .nav_item a{
@@ -192,7 +232,27 @@ header{
   }
   /*Your code here again.*/
   /*You will want four selectors*/
+  body {
+    background-image: none;
+  }
+
+  .pricing{
+    vertical-align: top;
+  }
+
+  .gallery{
+    display: none;
+  }
+
+  #gallery{
+    display: none;
+  }
 }
 
 /*Your code here again.*/
 /*Add media query to handle reduced-motion*/
+@media screen and (prefers-reduced-motion: reduce) {
+    #logo {
+      animation: none;
+    }
+}
