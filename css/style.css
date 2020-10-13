@@ -175,6 +175,7 @@ header{
 .nav_links{
   /*Your code here again.*/
   display: flex;
+  flex-direction: column;
   align-self: center;
   list-style: none;
 }
@@ -220,6 +221,7 @@ header{
   .nav_links{
     /*Your code here again.*/
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
   }
 
