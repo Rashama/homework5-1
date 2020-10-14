@@ -242,6 +242,7 @@ header{
 
   .pricing{
     vertical-align: top;
+    align-items: flex-start;
   }
 
   .gallery{
